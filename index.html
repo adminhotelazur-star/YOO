@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== PAGE 1 ===== -->
+    <section id="page1" class="page active">
+      <video
+        class="bg-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="https://images.pexels.com/photos/1580286/pexels-photo-1580286.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      >
+        <source
+          src="https://videos.pexels.com/video-files/1409830/1409830-uhd_2560_1440_30fps.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="overlay"></div>
+
+      <div class="content">
+        <h1 class="title">Hi <span class="heart">❤️</span></h1>
+        <p class="msg">I hope you're doing well.</p>
+        <p class="msg">
+          I know we haven't talked much this week, but honestly I've been really
+          busy with work and some things I needed to finish.
+        </p>
+        <p class="msg">That's why I couldn't send you a message.</p>
+        <p class="msg highlight">But I wanted to ask you something...</p>
+        <button id="goToPage2" class="btn btn-primary">Click here <span>❤️</span></button>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 2 ===== -->
+    <section id="page2" class="page">
+      <div class="overlay overlay-soft"></div>
+      <div class="content">
+        <h1 class="title">Would you like to go on a date with me? <span class="heart">❤️</span></h1>
+        <div class="choice-buttons">
+          <button id="yesBtn" class="btn btn-yes">YES <span>❤️</span></button>
+          <button id="noBtn" class="btn btn-no">NO 😅</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAGE 3 ===== -->
+    <section id="page3" class="page">
+      <div class="overlay overlay-soft"></div>
+      <div class="content">
+        <h1 class="title">So you want to go on a date with me?</h1>
+        <p class="msg highlight">That's awesome <span class="heart">❤️</span></p>
+        <p class="msg">What would you prefer?</p>
+
+        <div class="cards">
+          <button class="card" data-choice="Beach 🌊" style="background-image:url('image/beacj.jpg')">
+            <span class="card-label">Beach 🌊</span>
+          </button>
+          <button class="card" data-choice="Mexican Restaurant 🌮" style="background-image:url('https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=900')">
+            <span class="card-label">Mexican Restaurant 🌮</span>
+          </button>
+          <button class="card" data-choice="Zoo 🦁" style="background-image:url('image/zoo.jpg')">
+            <span class="card-label">Zoo 🦁</span>
+          </button>
+          <button class="card" data-choice="Another place" style="background-image:url('https://images.pexels.com/photos/3787839/pexels-photo-3787839.jpeg?auto=compress&cs=tinysrgb&w=900')">
+            <span class="card-label">I have another place in mind ❤️</span>
+          </button>
+        </div>
+
+        <div id="customWrap" class="custom-wrap hidden">
+          <textarea id="customPlace" placeholder="Tell me where you would like us to go..." rows="3"></textarea>
+          <button id="confirmCustom" class="btn btn-primary">Confirm ❤️</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINAL ===== -->
+    <section id="pageFinal" class="page">
+      <div class="overlay overlay-soft"></div>
+      <div class="content">
+        <h1 class="title">Okay <span class="heart">❤️</span></h1>
+        <p class="msg big">It's a date then!</p>
+        <p class="msg">I can't wait.</p>
+        <div id="finalChoice" class="final-choice"></div>
+
+        <div class="date-picker-wrap">
+          <label for="datePick" class="date-label">Pick a date for our date ❤️</label>
+          <input type="date" id="datePick" class="date-input" />
+        </div>
+
+        <div class="final-actions">
+          <button id="sendWhatsappBtn" class="btn btn-whatsapp">Send on WhatsApp <span>💬</span></button>
+          <button id="resetBtn" class="btn btn-ghost">Start over</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
